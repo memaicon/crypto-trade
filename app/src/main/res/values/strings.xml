@@ -31,6 +31,11 @@
     <string name="know_more_message">Confira informações sobre o que são transações e cotações de cripto moeadas.</string>
 
     <!-- Transactions -->
+    <string name="new_transaction">Nova Transação</string>
+    <string name="coin_transaction">Moeda:</string>
+    <string name="amount_transaction">Quantidade:</string>
+    <string name="buy_transaction">Comprar</string>
+    <string name="sell_transaction">Vender</string>
 
     <!-- Share -->
     <string name="share_app">Compartilhe</string>
@@ -65,4 +70,6 @@
     <string name="thanks_icons_author_2"><u>Freepik</u></string>
     <string name="thanks_teacher">Obrigado pela inspiração:</string>
     <string name="thanks_teacher_author"><u>Prof. Ramon Lummertz</u></string>
+    <string name="thanks_author">Por:</string>
+    <string name="thanks_authors"><u>Maicon Esperafico e Vinicius Link</u></string>
 </resources>
