@@ -1,0 +1,133 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "7fec340eaec9866b03ca98e5b1d07c7f",
+    "entities": [
+      {
+        "tableName": "AllCoinsResponse",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coin` TEXT NOT NULL, `high` REAL NOT NULL, `buy` REAL NOT NULL, `sell` REAL NOT NULL, PRIMARY KEY(`coin`))",
+        "fields": [
+          {
+            "fieldPath": "coin",
+            "columnName": "coin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "high",
+            "columnName": "high",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "buy",
+            "columnName": "buy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sell",
+            "columnName": "sell",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "coin"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "MbtcResponse",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`ticker` TEXT NOT NULL, PRIMARY KEY(`ticker`))",
+        "fields": [
+          {
+            "fieldPath": "ticker",
+            "columnName": "ticker",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "ticker"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "TickerInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`high` REAL NOT NULL, `low` REAL NOT NULL, `vol` REAL NOT NULL, `last` REAL NOT NULL, `buy` REAL NOT NULL, `sell` REAL NOT NULL, `open` REAL NOT NULL, `date` INTEGER NOT NULL, PRIMARY KEY(`high`))",
+        "fields": [
+          {
+            "fieldPath": "high",
+            "columnName": "high",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "low",
+            "columnName": "low",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "vol",
+            "columnName": "vol",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "last",
+            "columnName": "last",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "buy",
+            "columnName": "buy",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sell",
+            "columnName": "sell",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "open",
+            "columnName": "open",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "high"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"7fec340eaec9866b03ca98e5b1d07c7f\")"
+    ]
+  }
+}

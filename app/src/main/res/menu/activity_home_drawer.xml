@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_quotations"
+        android:icon="@drawable/ic_quotations"
+        android:title="@string/menu_quotations" />
+    <item
+        android:id="@+id/nav_transactions"
+        android:icon="@drawable/ic_transactions"
+        android:title="@string/menu_transactions" />
+    <item
+        android:id="@+id/nav_guide"
+        android:icon="@drawable/ic_guide"
+        android:title="@string/menu_guide" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/ic_share"
+        android:title="@string/menu_share" />
+    <item
+        android:id="@+id/nav_credits"
+        android:icon="@drawable/ic_copyright"
+        android:title="@string/menu_credits" />
+</menu>

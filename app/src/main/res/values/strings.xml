@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Crypto Trade</string>
+
+    <!-- Splash -->
+    <string name="splash_title">Crypto Trade</string>
+    <string name="splash_message">Confira valores das Cripto Moedas,\ne simule seu investimento.</string>
+    <string name="retry">Tentar novamente</string>
+
+    <!-- Permission -->
+    <string name="permission_location">Você deve conceder permissões para determinar sua localização.</string>
+    <string name="permission_storage">Você deve conceder permissões para baixar a nova versão do aplicativo.</string>
+
+    <!-- Home -->
+    <string name="home_bottom_dialog_title">Cotação Atual BTC</string>
+
+    <string name="currency">R$ %s</string>
+    <string name="buy_price">Preço\nCompra</string>
+    <string name="sell_price">Preço\nVenda</string>
+    <string name="high_price">Maior\nPreço</string>
+    <string name="update_at">Atualizado em %1$s</string>
+
+    <string name="symptoms">Sintomas</string>
+    <string name="fever">Febre</string>
+    <string name="cough">Tosse seca</string>
+    <string name="difficulty_breathing">Dificuldade para\nrespirar</string>
+    <string name="runny_nose">Secreção\nnasal</string>
+    <string name="sore_throat">Dor de\ngarganta</string>
+
+    <string name="know_more_transactions_title">Saiba mais sobre as transações e cotações</string>
+    <string name="know_more_now">Conferir</string>
+    <string name="know_more_message">Confira informações sobre o que são transações e cotações de cripto moeadas.</string>
+
+    <!-- Transactions -->
+
+    <!-- Share -->
+    <string name="share_app">Compartilhe</string>
+    <string name="share_text">Veja os dados mais recentes de criptomoedas.\n\nTambém aprenda mais sobre os investimentos e cotações em moedas digitais.</string>
+
+    <!-- Error message -->
+    <string name="network_error_message">Por favor verifique sua conexão com a internet e tente novamente.</string>
+    <string name="default_error_message">Ocorreu um erro. Por favor, tente novamente.</string>
+
+    <!-- Menu -->
+    <string name="menu_quotations">Cotações</string>
+    <string name="menu_transactions">Transações</string>
+    <string name="menu_guide">Guia de Transações</string>
+    <string name="menu_share">Compartilhar</string>
+    <string name="menu_credits">Sobre</string>
+
+    <!-- Symptoms -->
+    <string name="symptoms_title_1">O que é o Bitcoin?</string>
+    <string name="symptoms_desc_1">Bitcoin é a primeira e a mais famosa criptomoeda do mundo digital. O volume global de transações realizadas em Bitcoin de janeiro a agosto de 2018 atingiu valor equivalente a US$ 830 bilhões¹. Pode ser usada como meio de pagamento e não é emitida pelo banco central de um país, nem depende de qualquer outra autoridade monetária.</string>
+    <string name="symptoms_title_2">Quais são os sintomas do COVID-19?</string>
+    <string name="symptoms_desc_2">Os sintomas mais comuns do COVID-19 são febre, cansaço e tosse seca. Alguns pacientes podem sentir dor, congestão nasal, coriza, garganta inflamada ou diarréia. Esses sintomas geralmente são leves e aparecem gradualmente.\nAlgumas pessoas são infectadas, mas não apresentam sintomas e não estão doentes. A maioria das pessoas (cerca de 80%) se recuperam da doença sem precisar de tratamento especial.\nCerca de 1 em cada 6 pessoas que contraem o COVID-19 desenvolvem uma doença mais grave e têm dificuldade para respirar. As pessoas idosas e as que têm condições médicas subjacentes, como pressão alta, problemas cardíacos ou diabetes, têm maior probabilidade de desenvolver doenças graves. Cerca de 2% das pessoas que contraíram a doença morreram. Pessoas com febre, tosse e falta de ar devem procurar atendimento médico.</string>
+
+    <!-- Thanks -->
+    <string name="thanks_title">Um obrigado e seus respectivos créditos a todos que tornaram esta aplicação possível!</string>
+    <string name="thanks_data">Obrigado pelos dados para:</string>
+    <string name="thanks_data_author"><u>Mercado BitCoin</u></string>
+    <string name="thanks_api">Obrigado pela API para:</string>
+    <string name="thanks_api_author"><u>Mercado BitCoin API</u></string>
+    <string name="thanks_icons">Obrigado pelos ícones para:</string>
+    <string name="thanks_icons_author_1"><u>Flaticon</u></string>
+    <string name="thank_and">e</string>
+    <string name="thanks_icons_author_2"><u>Freepik</u></string>
+    <string name="thanks_teacher">Obrigado pela inspiração:</string>
+    <string name="thanks_teacher_author"><u>Prof. Ramon Lummertz</u></string>
+</resources>
