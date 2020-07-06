@@ -17,6 +17,10 @@
 
         <!-- Activity -->
         <activity
+            android:name="br.com.tecdev.btctrade.feature.transactions.TransactionsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/GrayTheme" />
+        <activity
             android:name="br.com.tecdev.btctrade.feature.credits.CreditsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/GrayTheme" />
