@@ -52,7 +52,11 @@
     <string name="menu_share">Compartilhar</string>
     <string name="menu_credits">Sobre</string>
 
-    <!-- Symptoms -->
+    <!-- Dialog -->
+    <string name="dialog_default_cancel">Cancelar</string>
+    <string name="dialog_default_accept">Aceitar</string>
+
+    <!-- Guide -->
     <string name="symptoms_title_1">O que é o Bitcoin?</string>
     <string name="symptoms_desc_1">Bitcoin é a primeira e a mais famosa criptomoeda do mundo digital. O volume global de transações realizadas em Bitcoin de janeiro a agosto de 2018 atingiu valor equivalente a US$ 830 bilhões¹. Pode ser usada como meio de pagamento e não é emitida pelo banco central de um país, nem depende de qualquer outra autoridade monetária.</string>
     <string name="symptoms_title_2">Quais são os sintomas do COVID-19?</string>
@@ -72,9 +76,5 @@
     <string name="thanks_teacher_author"><u>Prof. Ramon Lummertz</u></string>
     <string name="thanks_author">Por:</string>
     <string name="thanks_authors"><u>Maicon Esperafico e Vinicius Link</u></string>
-
-    <!-- Dialog -->
-    <string name="dialog_default_cancel">Cancelar</string>
-    <string name="dialog_default_accept">Aceitar</string>
 
 </resources>
