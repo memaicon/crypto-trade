@@ -25,5 +25,9 @@ class AllCoinsResponse constructor(
 
     @SerializedName("sell")
     @ColumnInfo(name = "sell")
-    var sell: Double
+    var sell: Double,
+
+    @SerializedName("date")
+    @ColumnInfo(name = "date")
+    var date: Long
 ) : Parcelable

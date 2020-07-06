@@ -6,6 +6,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import br.com.tecdev.btctrade.feature.home.HomeViewModel
 import br.com.tecdev.btctrade.feature.splash.SplashViewModel
+import br.com.tecdev.btctrade.feature.transactions.TransactionsAdapter
+import br.com.tecdev.btctrade.feature.transactions.TransactionsViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -21,6 +23,11 @@ val homeModule = module {
 val allCoinsModule = module {
     viewModel { AllCoinsViewModel(get()) }
     factory { AllCoinsAdapter() }
+}
+
+val transactionsModule = module {
+    viewModel { TransactionsViewModel(get()) }
+    factory { TransactionsAdapter() }
 }
 
 val firebaseModule = module {

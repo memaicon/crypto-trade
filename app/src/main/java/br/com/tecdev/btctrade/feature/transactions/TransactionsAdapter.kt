@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import br.com.tecdev.btctrade.R
+import br.com.tecdev.btctrade.data.database.AppDatabase
 import br.com.tecdev.btctrade.model.Transactions
 import br.com.tecdev.btctrade.util.formatDateFromMillis
 import br.com.tecdev.btctrade.util.formatNumber
@@ -17,9 +18,10 @@ class TransactionsAdapter : RecyclerView.Adapter<TransactionsAdapter.Transaction
 
     var list: MutableList<Transactions>? = null
     var listSelected: Array<Boolean?>? = null
+    var database: AppDatabase? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TransactionsViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_all_coin, parent, false)
+        LayoutInflater.from(parent.context).inflate(R.layout.item_transaction, parent, false)
     )
 
     override fun getItemCount() = list?.size ?: 0
@@ -42,10 +44,23 @@ class TransactionsAdapter : RecyclerView.Adapter<TransactionsAdapter.Transaction
 
         fun bind(transaction: Transactions, isSelected: Boolean) {
             itemView.apply {
-                numberText.text = "#${adapterPosition + 1}"
-                countryName.text = transaction.coin
-                buyPriceText.text = resources.getString(R.string.currency, formatNumber(transaction.value))
-                sellPriceText.text = formatDateFromMillis(transaction.date)
+                coinName.text = transaction.coin
+                buyAmountText.text = transaction.amount.toString()
+                buyDateText.text = formatDateFromMillis(transaction.date)
+
+                val value = transaction.value
+                val amount = transaction.amount
+                val sellPrice = transaction.sell
+
+                val result = (sellPrice * amount) - (value * amount)
+
+                if (result > 0)
+                    resultText.setTextColor(resources.getColor(R.color.green))
+                else if (result < 0)
+                    resultText.setTextColor(resources.getColor(R.color.red))
+
+                resultText.text = resources.getString(R.string.currency, formatNumber(result))
+
                 contentItemView.setBackgroundColor(
                     if (isSelected) ContextCompat.getColor(
                         context,

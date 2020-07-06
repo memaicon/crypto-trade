@@ -52,8 +52,7 @@ class AllCoinsAdapter : RecyclerView.Adapter<AllCoinsAdapter.AllCoinsViewHolder>
 
         fun bind(coin: AllCoinsResponse, isSelected: Boolean) {
             itemView.apply {
-                numberText.text = "#${adapterPosition + 1}"
-                countryName.text = coin.coin
+                coinName.text = coin.coin
                 buyPriceText.text = resources.getString(R.string.currency, formatNumber(coin.buy))
                 sellPriceText.text = resources.getString(R.string.currency, formatNumber(coin.sell))
                 highPriceText.text = resources.getString(R.string.currency, formatNumber(coin.high))

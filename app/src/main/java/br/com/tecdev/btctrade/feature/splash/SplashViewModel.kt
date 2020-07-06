@@ -9,6 +9,7 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
 import br.com.tecdev.btctrade.BuildConfig
 import br.com.tecdev.btctrade.feature.base.BaseViewModel
 import br.com.tecdev.btctrade.repository.MbtcRepository
+import br.com.tecdev.btctrade.repository.TransactionRepository
 import br.com.tecdev.btctrade.util.getErrorMessage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

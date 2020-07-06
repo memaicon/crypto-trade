@@ -34,7 +34,8 @@ class MbtcRepositoryImpl(
                     it.name,
                     restApi.getCoin(it.name).ticker.high,
                     restApi.getCoin(it.name).ticker.buy,
-                    restApi.getCoin(it.name).ticker.sell
+                    restApi.getCoin(it.name).ticker.sell,
+                    restApi.getCoin(it.name).ticker.date
                 ))
             }
 
@@ -56,6 +57,10 @@ class MbtcRepositoryImpl(
 
     override suspend fun getAllCoins(): MutableList<AllCoinsResponse> {
         return database.allCoinsDao().getCoin()
+    }
+
+    override suspend fun getCoin(coin: String): MutableList<AllCoinsResponse> {
+        return database.allCoinsDao().getCoin(coin)
     }
 
     override suspend fun getLastUpdate(): String {

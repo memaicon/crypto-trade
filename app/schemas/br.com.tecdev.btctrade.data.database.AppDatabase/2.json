@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "f1cfc0a2bac099d0dd8b9e238aee9f76",
+    "identityHash": "ce04526c495a3dbc3cdb568f5c38b278",
     "entities": [
       {
         "tableName": "Transactions",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER NOT NULL, `coin` TEXT NOT NULL, `value` REAL NOT NULL, `date` INTEGER NOT NULL, PRIMARY KEY(`_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `coin` TEXT NOT NULL, `value` REAL NOT NULL, `amount` REAL NOT NULL, `sell` REAL NOT NULL, `date` INTEGER NOT NULL)",
         "fields": [
           {
             "fieldPath": "id",
@@ -27,6 +27,18 @@
             "notNull": true
           },
           {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sell",
+            "columnName": "sell",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
             "fieldPath": "date",
             "columnName": "date",
             "affinity": "INTEGER",
@@ -37,14 +49,14 @@
           "columnNames": [
             "_id"
           ],
-          "autoGenerate": false
+          "autoGenerate": true
         },
         "indices": [],
         "foreignKeys": []
       },
       {
         "tableName": "AllCoinsResponse",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coin` TEXT NOT NULL, `high` REAL NOT NULL, `buy` REAL NOT NULL, `sell` REAL NOT NULL, PRIMARY KEY(`coin`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coin` TEXT NOT NULL, `high` REAL NOT NULL, `buy` REAL NOT NULL, `sell` REAL NOT NULL, `date` INTEGER NOT NULL, PRIMARY KEY(`coin`))",
         "fields": [
           {
             "fieldPath": "coin",
@@ -68,6 +80,12 @@
             "fieldPath": "sell",
             "columnName": "sell",
             "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
             "notNull": true
           }
         ],
@@ -165,7 +183,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"f1cfc0a2bac099d0dd8b9e238aee9f76\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"ce04526c495a3dbc3cdb568f5c38b278\")"
     ]
   }
 }

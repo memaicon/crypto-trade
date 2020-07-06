@@ -7,19 +7,8 @@
     android:id="@+id/contentItemView"
     android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/numberText"
-        android:layout_width="40dp"
-        android:layout_height="match_parent"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/quicksand_medium"
-        android:gravity="center|start"
-        tools:text="#1"
-        android:textSize="12sp"
-        android:textColor="@color/black" />
-
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/countryName"
+        android:id="@+id/coinName"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:gravity="center|start"
@@ -27,17 +16,18 @@
         android:fontFamily="@font/quicksand_medium"
         tools:text="BTC"
         android:textSize="12sp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp" />
 
         <LinearLayout
             android:id="@+id/confirmedView"
-            android:layout_width="80dp"
+            android:layout_width="90dp"
             android:paddingStart="8dp"
             android:layout_height="match_parent"
             android:gravity="start|center">
 
             <TextView
-                android:id="@+id/buyPriceText"
+                android:id="@+id/buyAmountText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -50,12 +40,12 @@
 
         <LinearLayout
             android:id="@+id/deathView"
-            android:layout_width="72dp"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
             android:gravity="start|center">
 
             <TextView
-                android:id="@+id/sellPriceText"
+                android:id="@+id/buyDateText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -70,12 +60,12 @@
         <LinearLayout
             android:layout_marginEnd="16dp"
             android:id="@+id/recoveredView"
-            android:layout_width="72dp"
+            android:layout_width="90dp"
             android:layout_height="match_parent"
             android:gravity="start|center">
 
             <TextView
-                android:id="@+id/highPriceText"
+                android:id="@+id/resultText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"

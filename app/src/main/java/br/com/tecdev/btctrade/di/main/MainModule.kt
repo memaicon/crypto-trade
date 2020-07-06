@@ -10,5 +10,6 @@ val listModule = listOf(
     splashModule,
     homeModule,
     allCoinsModule,
+    transactionsModule,
     firebaseModule
 )

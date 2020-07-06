@@ -53,8 +53,13 @@
     <string name="menu_credits">Sobre</string>
 
     <!-- Dialog -->
-    <string name="dialog_default_cancel">Cancelar</string>
-    <string name="dialog_default_accept">Aceitar</string>
+    <string name="dialog_amount">Quantidade:</string>
+    <string name="dialog_coin">Moeda:</string>
+    <string name="dialog_cancel">Cancelar</string>
+    <string name="dialog_accept">Aceitar</string>
+    <string name="new_transaction_message">Vamos efetuar transação!</string>
+    <string name="dialog_amount_error">Digite uma quantidade.</string>
+    <string name="dialog_coin_error">Selecione uma moeda.</string>
 
     <!-- Guide -->
     <string name="symptoms_title_1">O que é o Bitcoin?</string>

@@ -5,10 +5,15 @@ import android.content.Context
 import android.os.Bundle
 import android.view.ViewGroup
 import android.view.Window
+import android.widget.ArrayAdapter
+import android.widget.Toast
+import androidx.core.view.isEmpty
 import br.com.tecdev.btctrade.R
-import kotlinx.android.synthetic.main.dialog_update.*
+import br.com.tecdev.btctrade.model.CoinType
+import kotlinx.android.synthetic.main.transaction_dialog.*
 
-class MessageDialog(context: Context) : Dialog(context) {
+
+class TransactionDialog(context: Context) : Dialog(context) {
 
     var onClickAccept: OnClickAccept? = null
     var onClickCancel: OnClickCancel? = null
@@ -21,7 +26,7 @@ class MessageDialog(context: Context) : Dialog(context) {
 
     private fun initDialog() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
-        setContentView(R.layout.dialog_update)
+        setContentView(R.layout.transaction_dialog)
         window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         setCancelable(false)
     }
@@ -32,8 +37,26 @@ class MessageDialog(context: Context) : Dialog(context) {
             cancel()
         }
         acceptButton.setOnClickListener {
-            onClickAccept?.onClickAccept(this)
+
+            if (validate()) {
+                onClickAccept?.onClickAccept(this)
+            }
+
         }
+    }
+
+    fun validate() : Boolean {
+        if (dialogAmount.text.isEmpty()) {
+            Toast.makeText(context, context.getString(R.string.dialog_amount_error) , Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        if (dialogCoin.selectedItem.toString().isEmpty()) {
+            Toast.makeText(context, context.getString(R.string.dialog_coin_error) , Toast.LENGTH_SHORT).show()
+            return false
+        }
+
+        return true
     }
 
     fun setTitle(title: String) {
@@ -42,6 +65,17 @@ class MessageDialog(context: Context) : Dialog(context) {
 
     fun setMessage(message: String) {
         messageText.text = message
+    }
+
+    fun setCoins() {
+        val spinner = dialogCoin
+        val items = CoinType.values()
+
+        if (spinner != null) {
+            val adapter = ArrayAdapter(context,
+                android.R.layout.simple_spinner_item, items)
+            spinner.adapter = adapter
+        }
     }
 
     fun setPositiveButtonText(text: String) {
@@ -53,7 +87,7 @@ class MessageDialog(context: Context) : Dialog(context) {
     }
 
     interface OnClickAccept {
-        fun onClickAccept(dialog: MessageDialog)
+        fun onClickAccept(dialog: TransactionDialog)
     }
 
     interface OnClickCancel {
@@ -65,8 +99,8 @@ class MessageDialog(context: Context) : Dialog(context) {
 
         private var title = ""
         private var message = ""
-        private var positiveButtonText = context.getString(R.string.dialog_default_accept)
-        private var negativeButtonText = context.getString(R.string.dialog_default_cancel)
+        private var positiveButtonText = context.getString(R.string.dialog_accept)
+        private var negativeButtonText = context.getString(R.string.dialog_cancel)
         var onClickAccept: OnClickAccept? = null
         var onClickCancel: OnClickCancel? = null
 
@@ -87,11 +121,11 @@ class MessageDialog(context: Context) : Dialog(context) {
         }
 
 
-        inline fun setOnClickAccept(crossinline onClickDownload: (dialog: MessageDialog) -> Unit) =
+        inline fun setOnClickAccept(crossinline onClickAccept: (dialog: TransactionDialog) -> Unit) =
             apply {
                 this.onClickAccept = object : OnClickAccept {
-                    override fun onClickAccept(dialog: MessageDialog) {
-                        onClickDownload(dialog)
+                    override fun onClickAccept(dialog: TransactionDialog) {
+                        onClickAccept(dialog)
                     }
                 }
             }
@@ -105,10 +139,11 @@ class MessageDialog(context: Context) : Dialog(context) {
         }
 
         fun show() {
-            val dialog = MessageDialog(context)
+            val dialog = TransactionDialog(context)
             dialog.show()
             dialog.setTitle(title)
             dialog.setMessage(message)
+            dialog.setCoins()
             dialog.setPositiveButtonText(positiveButtonText)
             dialog.setNegativeButtonText(negativeButtonText)
             dialog.onClickAccept = onClickAccept

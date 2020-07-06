@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp">
 
     <TextView
         android:id="@+id/titleText"
@@ -16,7 +18,7 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="16sp"
-        tools:text="@string/update_app_title" />
+        tools:text="@string/new_transaction" />
 
     <TextView
         android:id="@+id/messageText"
@@ -27,8 +29,47 @@
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/quicksand_light"
         android:gravity="center"
-        tools:text="@string/update_app_message"
+        tools:text="@string/new_transaction_message"
         android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialogAmountText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_amount" />
+
+        <EditText
+            android:id="@+id/dialogAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dialogCoinText"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_coin"
+            android:layout_gravity="center"/>
+
+        <Spinner
+            android:id="@+id/dialogCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -45,7 +86,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             android:fontFamily="@font/quicksand_light"
-            android:text="@string/dialog_default_cancel"
+            android:text="@string/dialog_cancel"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="14sp"
@@ -60,7 +101,7 @@
             android:layout_marginBottom="12dp"
             android:layout_weight="1"
             android:fontFamily="@font/quicksand_medium"
-            android:text="@string/dialog_default_accept"
+            android:text="@string/dialog_accept"
             android:textAllCaps="false" />
 
     </LinearLayout>

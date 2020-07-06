@@ -101,7 +101,7 @@ class HomeActivity : AppCompatActivity() {
             drawerLayout.openDrawer(navigationView)
         }
         knowMoreButton.setOnClickListener {
-            goToTransactions()
+            goToGuide()
         }
         allCoinsView.setOnClickListener {
             goToAllCoins()

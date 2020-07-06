@@ -10,7 +10,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity
 class Transactions (
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     @SerializedName("_id")
     @ColumnInfo(name = "_id")
     val id: Int,
@@ -22,6 +22,14 @@ class Transactions (
     @SerializedName("value")
     @ColumnInfo(name = "value")
     val value: Double,
+
+    @SerializedName("amount")
+    @ColumnInfo(name = "amount")
+    val amount: Double,
+
+    @SerializedName("sell")
+    @ColumnInfo(name = "sell")
+    val sell: Double,
 
     @SerializedName("date")
     @ColumnInfo(name = "date")

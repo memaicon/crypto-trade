@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context="br.com.tecdev.btctrade.feature.coins.TransactionsActivity">
+    tools:context="br.com.tecdev.btctrade.feature.transactions.TransactionsActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
@@ -66,4 +66,21 @@
             android:indeterminateTint="@color/purpleAccent" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="end">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/new_transaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/new_transaction"
+            android:src="@drawable/ic_add" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

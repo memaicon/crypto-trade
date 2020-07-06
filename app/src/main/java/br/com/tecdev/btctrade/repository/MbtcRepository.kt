@@ -11,5 +11,7 @@ interface MbtcRepository {
 
     suspend fun getAllCoins(): MutableList<AllCoinsResponse>
 
+    suspend fun getCoin(coin: String): MutableList<AllCoinsResponse>
+
     suspend fun getLastUpdate(): String
 }

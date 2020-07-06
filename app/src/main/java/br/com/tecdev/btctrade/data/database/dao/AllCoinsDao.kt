@@ -12,7 +12,7 @@ interface AllCoinsDao {
     @Query("SELECT * FROM AllCoinsResponse")
     fun getCoin(): MutableList<AllCoinsResponse>
 
-    @Query("SELECT * FROM AllCoinsResponse WHERE coin LIKE '%' || :q || '%'")
+    @Query("SELECT * FROM AllCoinsResponse WHERE coin LIKE '%' || :q || '%' LIMIT 1")
     fun getCoin(q : String): MutableList<AllCoinsResponse>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
