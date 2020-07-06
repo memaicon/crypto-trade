@@ -9,21 +9,21 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.tecdev.btctrade.R
 import br.com.tecdev.btctrade.model.AllCoinsResponse
 import br.com.tecdev.btctrade.util.formatNumber
-import kotlinx.android.synthetic.main.item_global_case.view.*
+import kotlinx.android.synthetic.main.item_all_coin.view.*
 import java.util.*
 
-class AllCoinsAdapter : RecyclerView.Adapter<AllCoinsAdapter.GlobalCasesViewHolder>() {
+class AllCoinsAdapter : RecyclerView.Adapter<AllCoinsAdapter.AllCoinsViewHolder>() {
 
     var list: MutableList<AllCoinsResponse>? = null
     var listSelected: Array<Boolean?>? = null
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = GlobalCasesViewHolder(
-        LayoutInflater.from(parent.context).inflate(R.layout.item_global_case, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = AllCoinsViewHolder(
+        LayoutInflater.from(parent.context).inflate(R.layout.item_all_coin, parent, false)
     )
 
     override fun getItemCount() = list?.size ?: 0
 
-    override fun onBindViewHolder(holder: GlobalCasesViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: AllCoinsViewHolder, position: Int) {
         list?.get(position)?.run {
             listSelected?.get(position)?.let {
                 holder.bind(this, it)
@@ -48,7 +48,7 @@ class AllCoinsAdapter : RecyclerView.Adapter<AllCoinsAdapter.GlobalCasesViewHold
         } ?: return -1
     }
 
-    inner class GlobalCasesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class AllCoinsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(coin: AllCoinsResponse, isSelected: Boolean) {
             itemView.apply {

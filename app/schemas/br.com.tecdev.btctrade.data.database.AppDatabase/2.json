@@ -2,8 +2,46 @@
   "formatVersion": 1,
   "database": {
     "version": 2,
-    "identityHash": "7fec340eaec9866b03ca98e5b1d07c7f",
+    "identityHash": "f1cfc0a2bac099d0dd8b9e238aee9f76",
     "entities": [
+      {
+        "tableName": "Transactions",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`_id` INTEGER NOT NULL, `coin` TEXT NOT NULL, `value` REAL NOT NULL, `date` INTEGER NOT NULL, PRIMARY KEY(`_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coin",
+            "columnName": "coin",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "value",
+            "columnName": "value",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
       {
         "tableName": "AllCoinsResponse",
         "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`coin` TEXT NOT NULL, `high` REAL NOT NULL, `buy` REAL NOT NULL, `sell` REAL NOT NULL, PRIMARY KEY(`coin`))",
@@ -127,7 +165,7 @@
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"7fec340eaec9866b03ca98e5b1d07c7f\")"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"f1cfc0a2bac099d0dd8b9e238aee9f76\")"
     ]
   }
 }

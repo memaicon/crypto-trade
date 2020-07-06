@@ -30,7 +30,7 @@ class AllCoinsActivity : AppCompatActivity() {
         viewModel.showMbtcLiveData.observe(this, observerMbtc())
         viewModel.getCoinsLiveData.observe(this, observerGetCoins())
         viewModel.getLastUpdateLiveData.observe(this, observerLastUpdate())
-        viewModel.getAllCois()
+        viewModel.getAllCoins()
     }
 
     private fun setOnClick() {
@@ -40,7 +40,7 @@ class AllCoinsActivity : AppCompatActivity() {
     }
 
     private fun setRecycler() {
-        globalCasesRecycler.adapter = allCoinsAdapter
+        allCoinsRecycler.adapter = allCoinsAdapter
     }
 
     private fun setCoinSelected() {
@@ -69,7 +69,7 @@ class AllCoinsActivity : AppCompatActivity() {
             val position = allCoinsAdapter.getPositionFromCoin(coin!!.ticker.toString())
             position?.run {
                 allCoinsAdapter.listSelected?.set(this, true)
-                globalCasesRecycler.scrollToPosition(this)
+                allCoinsRecycler.scrollToPosition(this)
             }
         } else {
             allCoinsAdapter.notifyDataSetChanged()

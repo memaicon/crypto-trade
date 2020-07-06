@@ -10,7 +10,7 @@ import br.com.tecdev.btctrade.data.database.dao.TransactionsDao
 import br.com.tecdev.btctrade.model.*
 
 @Database(
-    entities = [AllCoinsResponse::class, MbtcResponse::class, TickerInfo::class],
+    entities = [Transactions::class, AllCoinsResponse::class, MbtcResponse::class, TickerInfo::class],
     version = 2,
     exportSchema = true
 )

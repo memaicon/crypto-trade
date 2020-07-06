@@ -72,4 +72,9 @@
     <string name="thanks_teacher_author"><u>Prof. Ramon Lummertz</u></string>
     <string name="thanks_author">Por:</string>
     <string name="thanks_authors"><u>Maicon Esperafico e Vinicius Link</u></string>
+
+    <!-- Dialog -->
+    <string name="dialog_default_cancel">Cancelar</string>
+    <string name="dialog_default_accept">Aceitar</string>
+
 </resources>

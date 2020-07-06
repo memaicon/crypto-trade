@@ -11,6 +11,7 @@ import br.com.tecdev.btctrade.R
 import br.com.tecdev.btctrade.feature.coins.AllCoinsActivity
 import br.com.tecdev.btctrade.feature.credits.CreditsActivity
 import br.com.tecdev.btctrade.feature.guide.GuideActivity
+import br.com.tecdev.btctrade.feature.transactions.TransactionsActivity
 import br.com.tecdev.btctrade.model.MbtcResponse
 import br.com.tecdev.btctrade.util.formatNumber
 import br.com.tecdev.btctrade.util.setTransparentStatusBar
@@ -110,7 +111,7 @@ class HomeActivity : AppCompatActivity() {
     /** Go to **/
 
     private fun goToTransactions() {
-        startActivity(Intent(this, GuideActivity::class.java))
+        startActivity(Intent(this, TransactionsActivity::class.java))
     }
 
     private fun goToGuide() {

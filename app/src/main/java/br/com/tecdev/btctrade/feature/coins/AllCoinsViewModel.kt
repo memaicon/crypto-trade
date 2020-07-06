@@ -18,7 +18,7 @@ class AllCoinsViewModel(private val btcRepository: MbtcRepository) : ViewModel()
 
     var getLastUpdateLiveData = MutableLiveData<String>()
 
-    fun getAllCois() {
+    fun getAllCoins() {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 val mbtc = btcRepository.getBitcoin()

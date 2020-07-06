@@ -181,16 +181,16 @@
             android:gravity="center"
             android:textColor="@color/black"
             android:visibility="invisible"
-            tools:text="Actualizado al 30/03/20" />
+            tools:text="Atualizado 30/03/20" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/globalCasesRecycler"
+            android:id="@+id/allCoinsRecycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:itemCount="30"
-            tools:listitem="@layout/item_global_case" />
+            tools:listitem="@layout/item_all_coin" />
 
     </LinearLayout>
 
